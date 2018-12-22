@@ -83,11 +83,9 @@ $(function() {
 
 
 
-
-
-
-
-
+$('#blur').on('click', function () {
+    $('.slides--portfolio_img').toggleClass('blur');
+});
 
 
 
