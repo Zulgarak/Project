@@ -1,0 +1,184 @@
+.header
+    width: 100%
+    position: relative
+    &-container
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        max-width: 1200px
+        margin: 0 auto
+        padding: 55px 15px 0 15px
+        box-sizing: border-box
+        z-index: 1
+    &-logo
+        font-size: 18px
+        font-weight: 700
+        text-transform: uppercase
+        &_text
+            display: block
+    &-nav
+        display: flex
+        align-items: center
+        position: relative
+        &_list
+            // display: none
+            // position: absolute
+            // right: 0
+
+            // width: 0
+            // overflow: hidden
+
+            transform: translateY(-200px)
+            transition: 0.2s
+            will-change: transform
+        &_list--active
+            display: block
+            transform: translateY(0)
+            // transform: translateX(40px)
+
+            // width: 500px
+
+
+
+        &_item
+            display: inline-block
+            margin-right: 20px
+        &_link
+            padding-bottom: 5px
+            font-size: 16px
+            font-weight: 700
+            color: $textColor
+            text-transform: uppercase
+            border-bottom: 2px solid transparent
+            &:hover
+                border-bottom: 2px solid $additionalColor
+    &-banner
+        width: 100%
+        background: url(/assets/img/bg/bg-header.jpg) center top
+        background-size: cover
+        height: 1000px
+        &-wrap
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            align-items: flex-end
+            height: 100%
+            text-align: right
+            @media screen and (max-width: 900px)
+                justify-content: center
+                align-items: center
+        &_title
+            position: relative
+            font-size: 62px
+            font-weight: 700
+            text-transform: uppercase
+            margin-bottom: 75px
+            @media screen and (max-width: 900px)
+                font-size: 50px
+            &::after
+                content: " "
+                position: absolute
+                bottom: -30px
+                right: 0
+                width: 138px
+                height: 4px
+                background-color: $additionalElemColor
+                @media screen and (max-width: 900px)
+                    right: 50%
+                    transform: translateX(50%)
+        &_text
+            max-width: 550px
+            margin-bottom: 60px
+            font-size: 18px
+            line-height: 2
+        &_btn
+            display: block
+            width: 275px
+            height: 50px
+            text-align: center
+            border: 2px solid $additionalElemColor
+            box-sizing: border-box
+            font-size: 18px
+            font-weight: 700
+            line-height: 46px
+            margin-bottom: 180px
+            cursor: pointer
+            transition: all 0.2s ease-in
+            &:hover
+                color: $greyColor
+                background: $textColor
+
+
+.sandwich
+    position: relative
+    width: 30px
+    height: 24px
+    border-top: 11px solid transparent
+    border-bottom: 11px solid transparent
+    background: $textColor
+    background-clip: content-box
+    box-sizing: border-box
+    cursor: pointer
+    transform: rotate(0deg)
+    transition: all 0.4s ease-in
+    z-index: 1
+    &:before,
+    &:after
+        content: " "
+        position: absolute
+        width: 100%
+        height: 2px
+        background: $textColor
+        transform: rotate(0deg)
+        transition: all 0.4s ease-in
+    &:before
+        top: -10px
+    &:after
+        bottom: -10px
+    &--active
+        background: transparent
+        background-clip: content-box
+    &--active:before
+        top: 0
+        width: 100%
+        background: $additionalColor
+        transform: rotate(135deg)
+    &--active:after
+        width: 100%
+        bottom: 0
+        background: $additionalColor
+        transform: rotate(-135deg)
+
+
+
+
+
+
+
+
+
+
+
+// .header-nav_list
+//     @media screen and (max-width: 900px)
+//         color: red
+
+
+
+
+// .header-container 
+//     @media screen and (max-width: 900px)
+//         top: 100px
+
+
+
+
+    // .header-banner_title:after
+    //     @media (max-width: 900px)
+    //         right: 50%
+    //         transform: translateX(50%)
+

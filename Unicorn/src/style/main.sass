@@ -1,0 +1,66 @@
+@import "vars"
+@import "component/header"
+@import "component/sections"
+@import "component/slider"
+@import "component/footer"
+
+
+
+
+body
+    font-family: $fontMain
+    color: $textColor
+    min-width: 500px
+
+a
+    text-decoration: none
+
+.container
+    position: relative
+    width: 100%
+    max-width: 1200px
+    height: 100%
+    margin: 0 auto
+    padding: 0 15px
+    box-sizing: border-box
+    &--flex
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        flex-wrap: wrap
+        @media screen and (max-width: 700px)
+            flex-direction: column
+            align-items: center
+
+
+
+.mb-110
+    margin-bottom: 110px
+    @media screen and (max-width: 900px)
+        margin-bottom: 60px
+
+.slick-slide
+    padding: 0 15px
+
+.bg-grey
+    background: $greyColor
+
+#toTop
+    width: 50px
+    height: 50px
+    line-height: 50px
+    text-align: center
+    // padding: 5px
+    position: fixed
+    bottom: 10px
+    right: 10px
+    cursor: pointer
+    // display: none
+    color: $footerBorder
+    font-size: 30px
+    background: #dfdfdf
+    opacity: 0.6
+    transition: 0.2s
+    &:hover
+        opacity: 1
+

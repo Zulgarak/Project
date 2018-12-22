@@ -1,0 +1,61 @@
+.slick-prev,
+.slick-next
+    font-size: 0
+    line-height: 0
+    position: absolute
+    top: 50%
+    display: block
+    width: 15px
+    height: 40px
+    padding: 0
+    -webkit-transform: translate(0, -50%)
+    -ms-transform: translate(0, -50%)
+    transform: translate(0, -50%)
+    cursor: pointer
+    border: 1 px solid black
+    border-radius: 2px
+    outline: none
+    background: transparent
+    z-index: 1001
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+    opacity: 1
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+    display: none
+
+.slick-prev:before,
+.slick-next:before
+    font-family: '$fontMain'
+    font-size: 32px
+    opacity: 1
+    color: $textColor
+
+.slick-prev
+    left: -75px
+    @media screen and (max-width: 1350px)
+        left: -15px
+    @media screen and (max-width: 1300px)
+        left: -5px
+
+.slick-prev:before
+    content: '\276e'
+
+.slick-next
+    right: -75px
+    @media screen and (max-width: 1350px)
+        right: -15px
+    @media screen and (max-width: 1300px)
+        right: -5px
+
+.slick-next:before
+    content: '\276f'
+
+
+.slick-dots li button::before
+    font-size: 50px
+
