@@ -30,7 +30,6 @@
         justify-content: space-between
         &-line
             position: relative
-            // width: 100%
             &--flex
                 display: flex
                 justify-content: space-between
@@ -50,6 +49,8 @@
             margin-bottom: 90px
             box-sizing: border-box
             resize: none
+            @media screen and (max-width: 900px)
+                margin-bottom: 50px
         &_btn
             position: relative
             width: 100px
@@ -63,8 +64,6 @@
             transition: 0.2s
             &:hover
                 border: 2px solid $footerBorder
-
-
 
     &-nav
         &_title
@@ -100,7 +99,6 @@
             flex-direction: column
             text-align: center
 
-
     &-disclaimer
         margin-right: 10px
         &_text
@@ -109,7 +107,6 @@
             &:last-child
                 @media screen and (max-width: 900px)
                     margin-bottom: 35px
-
 
 .afterTriangle
     &:after

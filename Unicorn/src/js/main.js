@@ -1,11 +1,5 @@
 (function () {
 
-// $(document).ready(function(){
-//   $('.your-class').slick({
-//     setting-name: setting-value
-//   });
-// });
-
 $('.slides').slick({
     infinite: false,
     slidesToShow: 3,
@@ -15,13 +9,13 @@ $('.slides').slick({
         breakpoint: 1300,
         settings: {
             slidesToShow: 2,
-            slidesToScroll: 1,
+
         }
         }, {
         breakpoint: 800,
         settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+
         }
     }]
 });
@@ -29,7 +23,7 @@ $('.slides').slick({
 $('.slides--clients').slick({
     infinite: true,
     slidesToShow: 6,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     autoplay: true,
     autoplaySpeed: 1000,
     arrows: false,
@@ -37,19 +31,19 @@ $('.slides--clients').slick({
         breakpoint: 970,
         settings: {
             slidesToShow: 5,
-            slidesToScroll: 1,
+
         }
         }, {
         breakpoint: 790,
         settings: {
             slidesToShow: 4,
-            slidesToScroll: 1
+
         }
         }, {
         breakpoint: 670,
         settings: {
             slidesToShow: 3,
-            slidesToScroll: 1
+
         }
     }]
 });
@@ -60,12 +54,27 @@ $('.slides--portfolio').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
-    dots: true
+    dots: true,
+        responsive: [{
+        breakpoint: 1500,
+        settings: {
+            slidesToShow: 3,
+
+        }
+        }, {
+        breakpoint: 790,
+        settings: {
+            slidesToShow: 2,
+
+        }
+        }, {
+        breakpoint: 670,
+        settings: {
+            slidesToShow: 2,
+
+        }
+    }]
 });
-
-
-
-
 
 $(function() {
     $(window).scroll(function() {
@@ -80,18 +89,8 @@ $(function() {
         });
 });
 
-
-
-
 $('#blur').on('click', function () {
     $('.slides--portfolio_img').toggleClass('blur');
 });
-
-
-
-
-
-
-
 
 })();
